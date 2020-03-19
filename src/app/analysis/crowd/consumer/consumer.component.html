@@ -1,0 +1,7 @@
+<mat-card>
+    <mat-card-title>Charts</mat-card-title>
+    <mat-card-content>
+        <ngx-charts-pie-chart *ngIf="data?.length" [scheme]="colorScheme" [results]="data" [legend]="showLegend" [explodeSlices]="explodeSlices" [labels]="showLabels" [doughnut]="doughnut" (select)="onSelect($event)">
+        </ngx-charts-pie-chart>
+    </mat-card-content>
+</mat-card>

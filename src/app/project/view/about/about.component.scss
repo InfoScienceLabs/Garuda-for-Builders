@@ -1,0 +1,22 @@
+@import '../../../../scss/table.scss';
+ul {
+    list-style: none;
+    margin-bottom: 0px;
+    padding: 0px;
+}
+
+.property-amenities li {
+    width: 18%;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+// .custom-file-input:active::before {
+//     background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+// }

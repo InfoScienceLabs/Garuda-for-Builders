@@ -1,0 +1,40 @@
+<div class="container">
+  <div fxLayout="row wrap" fxLayoutAlign="center center" class="m-t-15">
+    <div fxFlex.gt-sm='50'>
+      <mat-horizontal-stepper [linear]="isLinear" #stepper>
+        <mat-step>
+          <ng-template matStepLabel>Wallet Details</ng-template>
+          <form #walletForm="ngForm">
+            <mat-form-field class="display-block">
+              <input matInput placeholder="User ID" [(ngModel)]="user.id" name="id" #id="ngModel" [readonly]="readOnly"
+                required>
+            </mat-form-field>
+
+            <mat-form-field class="display-block">
+              <input matInput placeholder="Wallet Address" [(ngModel)]="user.walletAddress" name="walletAddress"
+                #walletAddress="ngModel" [readonly]="readOnly" required>
+            </mat-form-field>
+            
+            <mat-form-field class="display-block">
+              <input matInput placeholder="Wallet Balance" [(ngModel)]="user.balance" name="balance"
+                #balance="ngModel" [readonly]="readOnly" required>
+            </mat-form-field>
+          </form>
+          <div>
+          </div>
+        </mat-step>
+        <mat-step>
+          <ng-template matStepLabel>Deposit Balance</ng-template>
+          <br><br><br><br>
+        
+          <form #walletForm="ngForm">
+             <div>
+  
+              <button fxFlex="10" mat-raised-button fxFlex color="accent" (click)="updatewallet()">Request for Balance</button>
+            </div>
+          </form>
+        </mat-step>
+      </mat-horizontal-stepper>
+    </div>
+  </div>
+</div>

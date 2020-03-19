@@ -1,0 +1,66 @@
+<div fxLayout="row" class="m-t-15">
+    <div fxFlex.gt-sm='100'>
+        <mat-card>
+            <mat-card-title>KYC Details</mat-card-title>
+            <mat-card-content>
+                <form>
+                    <div fxLayout="row" fxLayoutGap="40px">
+                        <mat-form-field appearance="outline" fxFlex>
+                            <mat-label>Pan Number</mat-label>
+                            <input matInput placeholder="First Name">
+                        </mat-form-field>
+                        <div fxFlex fxLayoutAlign="start center">
+                            <button mat-raised-button color="primary" type="button">
+                          <label for="fileToUpload">
+                              Upload
+                              <!-- <mat-icon>add</mat-icon>  -->
+                          </label>
+                      </button>
+                            <input id="fileToUpload" type="file" style="display:none;" (change)="processWebImage($event)">
+                            <small class="p-2">*Accepts Jpg, png Formats Image size less than 100KB
+                             </small>
+                        </div>
+                    </div>
+                    <div fxLayout="row wrap" fxLayoutGap="30px" fxLayoutAlign="start center">
+                        <div *ngFor="let image of images">
+                            <img *ngIf="image" [src]="image" style="width: 100px; height: 100px; padding: 10px;" />
+                            <span *ngIf="image" class="remove"><mat-icon (click)="removeImage(hello)">remove_circle</mat-icon> </span>
+                        </div>
+                    </div>
+                    <div fxLayout="row" fxLayoutGap="40px">
+                        <mat-form-field appearance="outline" fxFlex>
+                            <mat-label>Aadhar Number</mat-label>
+                            <input matInput placeholder="Aadhar Number">
+                        </mat-form-field>
+                        <div fxFlex fxLayoutAlign="start center">
+                            <button mat-raised-button color="primary" type="button">
+                          <label for="fileUpload">
+                              Upload
+                          </label>
+                      </button>
+                            <input id="fileUpload" type="file" style="display:none;" (change)="procesdocImage($event)">
+                            <small class="p-2">*Accepts Jpg, png Formats Image size less than 100KB
+                             </small>
+                        </div>
+                    </div>
+
+                    <div fxLayout="row wrap" fxLayoutGap="30px" fxLayoutAlign="start center">
+                        <div *ngFor="let image of docimages">
+                            <img *ngIf="docimages" [src]="image" style="width: 100px; height: 100px; padding: 10px;" />
+                            <span *ngIf="docimages" class="remove"><mat-icon (click)="removedocImage(doc)">remove_circle</mat-icon> </span>
+                        </div>
+                    </div>
+                    <div fxLayout="row">
+                        <p>
+                            Verification Status:
+                            <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+                                <mat-button-toggle color="warn" value="bold">Rejected</mat-button-toggle>
+                                <mat-button-toggle color="primary" value="italic">Approved</mat-button-toggle>
+                            </mat-button-toggle-group>
+                        </p>
+                    </div>
+                </form>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

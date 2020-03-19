@@ -1,0 +1,140 @@
+<!-- <div class="main-toolbar mat-elevation-z6" fxLayout="row" fxLayoutAlign="start center">
+    <div>
+        <a [routerLink]="['./']" class="brand-logo"><img class="img-w" src="../../../assets/images/garuda-home.svg" /></a>
+    </div>
+    <span fxFlex></span>
+    <button mat-button *ngFor="let link of links"><span class="c-w" [routerLink]="link.url" routerLinkActive="active">{{link.title}}</span></button>
+    <div class="toolbar-user-container">
+        <button mat-button (click)="toggleDropdown()" class="toolbar-user-btn" [class.open]="isOpen">
+                            <span fxLayout="row" fxLayoutAlign="start center">
+                              <img class="avatar" src='assets/images/avatars/noavatar.png'>
+                              <span class="name" fxHide fxShow.gt-sm>User</span>
+                              <mat-icon class="icon" fxHide fxShow.gt-sm>keyboard_arrow_down</mat-icon>
+                            </span>
+                </button>
+        <div class="dropdown mat-elevation-z1" [class.open]="isOpen">
+            <mat-nav-list>
+                <mat-list-item [routerLink]="['./profile']">
+                    <mat-icon class="icon">account_circle</mat-icon>
+                    <span class="title">Profile</span>
+                </mat-list-item>
+                <mat-list-item routerLink="/pages/profile">
+                    <mat-icon class="icon">settings</mat-icon>
+                    <span class="title">Manage</span>
+                </mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item (click)="logout()">
+                    <mat-icon class="icon">power_settings_new</mat-icon>
+                    <span class="title">Logout</span>
+                </mat-list-item>
+            </mat-nav-list>
+        </div>
+    </div>
+</div>
+<app-main></app-main>
+<app-footer></app-footer> -->
+
+<div class="limiter">
+    <div class="container-login100" style="background-image: url('../assets/images/bg-01.jpg');">
+        <div class="fix-width">
+            <div class="m-b-15" fxLayout="row" fxLayoutAlign="center center">
+                <img src="../../assets/images/garuda-home.svg" width="250px">
+            </div>
+            <div fxLayout="row wrap" fxFlexAlign="center" fxLayoutGap="30px">
+                <div class="wrapper">
+
+                    <div class="content">
+                        <!-- card -->
+                        <div class="card" [routerLink]="['/login']">
+
+                            <div class="icon"><i class="material-icons md-36">dashboard</i></div>
+                            <p class="title">Admin</p>
+                            <p class="text">UserName: admin@garuda.com</p>
+                            <p class="text">Password: password</p>
+
+                        </div>
+                        <!-- end card -->
+                        <!-- card -->
+                        <div class="card" [routerLink]="['/login']">
+
+                            <div class="icon"><i class="material-icons md-36">account_balance</i></div>
+                            <p class="title">Government</p>
+                            <p class="text">UserName: government@cognier.co</p>
+                            <p class="text">Password: password</p>
+
+                        </div>
+                        <!-- end card -->
+                        <!-- card -->
+                        <div class="card" [routerLink]="['/login']">
+
+                            <div class="icon"><i class="material-icons md-36 adjest">perm_identity</i></div>
+                            <p class="title">Buyer/seller</p>
+                            <p class="text">UserName: user@cognier.co</p>
+                            <p class="text">Password: password</p>
+
+                        </div>
+                        <!-- end card -->
+
+
+
+                    </div>
+                </div>
+                <!-- <mat-card fxFlex.gt-sm="30" fxFlex.gt-xs="31" fxFlex="100">
+                    <img mat-card-image src="assets/images-demo/assets/1.png">
+                    <mat-card-content>
+                        <mat-list>
+                            <mat-list-item>
+                                <mat-icon mat-list-avatar class="list-avatar-icon">security</mat-icon>
+                                <h3 mat-line>User Name : r@cogniermail.com</h3>
+                                <p mat-line>
+                                    <span>Password: password</span>
+                                </p>
+                            </mat-list-item>
+                        </mat-list>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <button class="stbui-button-block" mat-stroked-button color="primary">Login</button>
+                    </mat-card-actions>
+                </mat-card>
+
+                <mat-card fxFlex.gt-sm="30" fxFlex.gt-xs="31" fxFlex="100">
+                    <img mat-card-image src="assets/images-demo/assets/2.png">
+                    <mat-card-content>
+                        <mat-list>
+                            <mat-list-item>
+                                <mat-icon mat-list-avatar class="list-avatar-icon">security</mat-icon>
+                                <h3 mat-line>User Name : r@cogniermail.com</h3>
+                                <p mat-line>
+                                    <span>Password: password</span>
+                                </p>
+                            </mat-list-item>
+
+                        </mat-list>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <button class="stbui-button-block" mat-stroked-button color="primary">Login</button>
+                    </mat-card-actions>
+                </mat-card>
+
+                <mat-card fxFlex.gt-sm="30" fxFlex.gt-xs="31" fxFlex="100">
+                    <img mat-card-image src="assets/images-demo/assets/3.png">
+                    <mat-card-content>
+                        <mat-list>
+                            <mat-list-item>
+                                <mat-icon mat-list-avatar class="list-avatar-icon">security</mat-icon>
+                                <h3 mat-line>User Name : r@cogniermail.com</h3>
+                                <p mat-line>
+                                    <span>Password: password</span>
+                                </p>
+                            </mat-list-item>
+
+                        </mat-list>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <button class="stbui-button-block" mat-stroked-button color="primary">Login</button>
+                    </mat-card-actions>
+                </mat-card> -->
+            </div>
+        </div>
+    </div>
+</div>

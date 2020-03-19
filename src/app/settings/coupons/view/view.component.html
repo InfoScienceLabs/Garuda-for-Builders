@@ -1,0 +1,29 @@
+<div fxLayout="row wrap" fxLayoutAlign="center center" class="form-group">
+    <div fxFlex.gt-sm="70" class="divide">
+        <mat-card>
+            <mat-card-title>Coupon Details</mat-card-title>
+            <mat-card-content>
+                <form #frm="ngForm">
+                    <mat-form-field class="display-block">
+                        <input matInput placeholder=" Coupon Name" name="name" required>
+                    </mat-form-field>
+                    <div fxLayout="row" fxLayoutGap="30px">
+                        <mat-form-field fxFlex>
+                            <input matInput [matDatepicker]="picker" placeholder="Start Date">
+                            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                            <mat-datepicker #picker></mat-datepicker>
+                        </mat-form-field>
+                        <mat-form-field fxFlex>
+                            <input matInput [matDatepicker]="pickers" placeholder="End Date">
+                            <mat-datepicker-toggle matSuffix [for]="pickers"></mat-datepicker-toggle>
+                            <mat-datepicker #pickers></mat-datepicker>
+                        </mat-form-field>
+                    </div>
+                    <div fxLayout="row" fxLayoutAlign="center center">
+                        <button mat-raised-button color="primary" type="submit">Submit</button>
+                    </div>
+                </form>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+@import '../../../../scss/table.scss';
+.example-headers-align .mat-expansion-panel-header-title,
+.example-headers-align .mat-expansion-panel-header-description {
+    flex-basis: 0;
+}
+
+.example-headers-align .mat-expansion-panel-header-description {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mat-expansion-panel {
+    margin: 1rem 0;
+}
+
+.material-icons.edit_plus {
+    font-size: 26px;
+    padding: 0 0.5rem;
+}
+
+.mat-expansion-panel-body {
+    padding: 24px 24px;
+}

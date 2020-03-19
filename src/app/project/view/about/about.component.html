@@ -1,0 +1,235 @@
+<div fxLayout="row wrap" fxLayoutAlign="start center" fxLayoutGap="20px" class="m-t-15">
+    <div fxFlex.gt-sm='100'>
+        <mat-card>
+            <mat-card-title>Details</mat-card-title>
+            <mat-card-content>
+                <form>
+                    <div fxLayout="row">
+                        <mat-form-field appearance="outline" fxFlex>
+                            <mat-label>Name</mat-label>
+                            <input matInput placeholder="Name">
+                        </mat-form-field>
+                    </div>
+                    <div fxLayout="row" fxLayoutGap="40px">
+                        <mat-form-field appearance="outline" fxFlex>
+                            <mat-label>Property Type</mat-label>
+                            <mat-select [formControl]="pokemonControl">
+                                <mat-option>Select Option</mat-option>
+                                <mat-optgroup *ngFor="let group of pokemonGroups" [label]="group.name" [disabled]="group.disabled">
+                                    <mat-option *ngFor="let pokemon of group.pokemon" [value]="pokemon.value">
+                                        {{pokemon.viewValue}}
+                                    </mat-option>
+                                </mat-optgroup>
+                            </mat-select>
+                        </mat-form-field>
+                        <mat-form-field appearance="outline" fxFlex>
+                            <mat-label>Status</mat-label>
+                            <mat-select placeholder="Status">
+                                <mat-option *ngFor="let brand of status" [value]="brand.value">
+                                    {{brand.viewValue}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div fxLayout="row">
+                        <mat-form-field appearance="outline" fxFlex>
+                            <mat-label>Description</mat-label>
+                            <textarea rows="8" cols="40" matInput placeholder="Description"></textarea>
+                        </mat-form-field>
+                    </div>
+                </form>
+            </mat-card-content>
+        </mat-card>
+        <div fxLayout="row" fxLayoutAlign="center center" class="m-t-15">
+            <div fxFlex.gt-sm='100'>
+                <mat-card>
+                    <div>
+                        <div fxFlex.gt-sm='50'>
+                            <mat-card-title>Gallery</mat-card-title>
+                        </div>
+                        <div fxFlex.gt-sm='50' fxLayoutAlign="end center">
+                            <input type="file" class="custom-file-input" (change)="processWebImage($event)">
+                        </div>
+                    </div>
+                    <mat-card-content>
+                        <div class='display-block-dropify'>
+
+                            <div fxLayout="row wrap" fxLayoutGap="30px" fxLayoutAlign="start center">
+                                <div *ngFor="let image of images">
+
+                                    <img *ngIf="image" [src]="image" style="width: 100px; height: 100px; padding: 10px;" />
+                                    <span *ngIf="image" class="remove"><mat-icon (click)="removeImage(hello)">remove_circle</mat-icon> </span>
+                                </div>
+                            </div>
+
+                            <!-- <div fxLayout="row wrap" fxLayoutAlign="space-around center" class="m-t-15" fxLayoutGap="40px">
+                                <button fxFlex mat-raised-button color="accent">Browse</button>
+                                <button fxFlex mat-raised-button color="primary">Upload</button>
+                                <button fxFlex mat-raised-button color="warn" (click)="removeImage(hello)">Remove</button>
+                            </div> -->
+                        </div>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </div>
+
+        <div fxLayout="row" fxLayoutAlign="center center" class="m-t-15">
+            <div fxFlex.gt-sm='100'>
+                <mat-card>
+                    <div>
+                        <div fxFlex.gt-sm='50'>
+                            <mat-card-title>Address</mat-card-title>
+                        </div>
+                        <div fxFlex.gt-sm='50' fxLayoutAlign="end center">
+                        </div>
+                    </div>
+                    <mat-card-content>
+                        <div fxLayout="column">
+                            <mat-form-field appearance="outline" fxFlex>
+                                <mat-label>Street</mat-label>
+                                <input matInput placeholder="Street" name="street" required>
+                            </mat-form-field>
+                            <mat-form-field appearance="outline" fxFlex>
+                                <mat-label>City</mat-label>
+                                <input matInput placeholder="City" name="city" required>
+                            </mat-form-field>
+                            <mat-form-field appearance="outline" fxFlex>
+                                <mat-label>State</mat-label>
+                                <input matInput placeholder="State" name="state" required>
+                            </mat-form-field>
+                            <mat-form-field appearance="outline" fxFlex>
+                                <mat-label>Country</mat-label>
+                                <input matInput placeholder="Country" name="country" required>
+                            </mat-form-field>
+                            <mat-form-field appearance="outline" fxFlex>
+                                <mat-label>ZIP Code</mat-label>
+                                <input matInput placeholder="ZIP" name="zip" required>
+                            </mat-form-field>
+                        </div>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="center center" class="m-t-15">
+            <div fxFlex.gt-sm='100'>
+                <mat-card>
+                    <div>
+                        <div fxFlex.gt-sm='50'>
+                            <mat-card-title>Amenities</mat-card-title>
+                        </div>
+                        <div fxFlex.gt-sm='50' fxLayoutAlign="end center">
+                        </div>
+                    </div>
+                    <mat-card-content>
+
+                        <div fxLayout="row wrap">
+                            <div class="property-amenities">
+                                <ul fxLayout="row wrap" fxLayoutAlign="start center" fxLayoutGap="30px">
+                                    <li>
+                                        <mat-checkbox> Air conditioning</mat-checkbox>
+                                    </li>
+                                    <li>
+                                        <mat-checkbox> Balcony</mat-checkbox>
+                                    </li>
+                                    <li>
+                                        <mat-checkbox> Bedding</mat-checkbox>
+                                    </li>
+                                    <li>
+                                        <mat-checkbox> Cable TV</mat-checkbox>
+                                    </li>
+                                    <li>
+                                        <mat-checkbox> Cleaning after exit</mat-checkbox>
+                                    </li>
+                                    <li>
+                                        <mat-checkbox> Cofee pot</mat-checkbox>
+                                    </li>
+                                    <li>
+                                        <mat-checkbox> Computer</mat-checkbox>
+                                    </li>
+                                    <li>
+                                        <mat-checkbox> Cot</mat-checkbox>
+                                    </li>
+                                    <li>
+                                        <mat-checkbox> Dishwasher</mat-checkbox>
+                                    </li>
+                                    <li>
+                                        <mat-checkbox> DVD</mat-checkbox>
+                                    </li>
+                                    <li>
+                                        <mat-checkbox> Fan</mat-checkbox>
+                                    </li>
+                                    <li>
+                                        <mat-checkbox> Fridge</mat-checkbox>
+                                    </li>
+                                    <li>
+                                        <mat-checkbox> Grill</mat-checkbox>
+                                    </li>
+                                    <li>
+                                        <mat-checkbox> Hairdryer</mat-checkbox>
+                                    </li>
+                                    <li>
+                                        <mat-checkbox> Heating</mat-checkbox>
+                                    </li>
+                                    <li>
+                                        <mat-checkbox> Wi-fi</mat-checkbox>
+                                    </li>
+                                    <li>
+                                        <mat-checkbox> Internet</mat-checkbox>
+                                    </li>
+                                    <li>
+                                        <mat-checkbox> Iron</mat-checkbox>
+                                    </li>
+                                    <li>
+                                        <mat-checkbox> Juicer</mat-checkbox>
+                                    </li>
+                                    <li>
+                                        <mat-checkbox> Lift</mat-checkbox>
+                                    </li>
+                                    <li>
+                                        <mat-checkbox> Microwave</mat-checkbox>
+                                    </li>
+                                    <li>
+                                        <mat-checkbox> Oven</mat-checkbox>
+                                    </li>
+                                    <li>
+                                        <mat-checkbox> Parking</mat-checkbox>
+                                    </li>
+                                    <li>
+                                        <mat-checkbox> Parquet</mat-checkbox>
+                                    </li>
+                                    <li>
+                                        <mat-checkbox> Pool</mat-checkbox>
+                                    </li>
+                                    <li>
+                                        <mat-checkbox> Radio</mat-checkbox>
+                                    </li>
+                                    <li>
+                                        <mat-checkbox> Roof terrace</mat-checkbox>
+                                    </li>
+                                    <li>
+                                        <mat-checkbox> Smoking allowed</mat-checkbox>
+                                    </li>
+                                    <li>
+                                        <mat-checkbox> Terrace</mat-checkbox>
+                                    </li>
+                                    <li>
+                                        <mat-checkbox> Toaster</mat-checkbox>
+                                    </li>
+                                    <li>
+                                        <mat-checkbox> Towelwes</mat-checkbox>
+                                    </li>
+                                    <li>
+                                        <mat-checkbox> Use of pool</mat-checkbox>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>
+<div fxLayout="row" fxLayoutAlign="end center" class="m-t-15">
+    <button mat-raised-button matStepperNext>Next</button>
+</div>

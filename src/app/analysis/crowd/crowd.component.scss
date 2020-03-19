@@ -1,0 +1,55 @@
+:host {
+    display: block;
+    margin: 15px;
+}
+
+:host::before {
+    content: '';
+    width: 100%;
+    height: 900px;
+    z-index: -1000;
+    background: linear-gradient(to bottom right, #f7f7f7, #eafbff);
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transform: skew(0deg, -15deg);
+    transform: skew(0deg, -15deg);
+}
+
+.m-0 {
+    margin: 0;
+}
+
+.m-t-2 {
+    margin: 1rem 0;
+}
+
+.h-0 {
+    height: 0%;
+}
+
+.text-muted {
+    color: #99abb4!important;
+}
+
+h6 {
+    line-height: 16px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+// mat-card {
+//     margin: 5px;
+//     padding: 0;
+// }
+// mat-card-title {
+//     padding: 16px 24px;
+// }
+// mat-card-content {
+//     min-height: 400px;
+// }
+// .example-card {
+//     max-width: 400px;
+// }

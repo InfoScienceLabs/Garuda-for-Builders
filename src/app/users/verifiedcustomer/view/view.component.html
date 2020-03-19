@@ -1,0 +1,61 @@
+<div class="py-3">
+    <mat-horizontal-stepper class="mat-elevation-z1" [linear]="isLinear" #stepper>
+        <mat-step [stepControl]="firstFormGroup">
+            <form [formGroup]="firstFormGroup">
+                <ng-template matStepLabel>Personal</ng-template>
+                <app-personal></app-personal>
+                <div>
+                    <button mat-button matStepperNext>Next</button>
+                </div>
+            </form>
+        </mat-step>
+        <mat-step [stepControl]="secondFormGroup">
+            <form [formGroup]="secondFormGroup">
+                <ng-template matStepLabel>KYC</ng-template>
+                <app-kyc></app-kyc>
+                <div>
+                    <button mat-button matStepperPrevious>Back</button>
+                    <button mat-button matStepperNext>Next</button>
+                </div>
+            </form>
+        </mat-step>
+        <mat-step [stepControl]="thirdFormGroup">
+            <form [formGroup]="thirdFormGroup">
+                <ng-template matStepLabel>Bank</ng-template>
+                <app-bank></app-bank>
+                <div>
+                    <button mat-button matStepperPrevious>Back</button>
+                    <button mat-button matStepperNext>Next</button>
+                </div>
+            </form>
+        </mat-step>
+        <mat-step [stepControl]="fourthFormGroup">
+            <form [formGroup]="fourthFormGroup">
+                <ng-template matStepLabel>Wallet</ng-template>
+                <app-wallet></app-wallet>
+                <div>
+                    <button mat-button matStepperPrevious>Back</button>
+                    <button mat-button matStepperNext>Next</button>
+                </div>
+            </form>
+        </mat-step>
+        <mat-step [stepControl]="fivthFormGroup">
+            <form [formGroup]="fivthFormGroup">
+                <ng-template matStepLabel>Property</ng-template>
+                <app-properties></app-properties>
+                <div>
+                    <button mat-button matStepperPrevious>Back</button>
+                    <button mat-button matStepperNext>Next</button>
+                </div>
+            </form>
+        </mat-step>
+        <mat-step>
+            <ng-template matStepLabel>Done</ng-template>
+            You are now done.
+            <div>
+                <button mat-button matStepperPrevious>Back</button>
+                <button mat-button (click)="stepper.reset()">Reset</button>
+            </div>
+        </mat-step>
+    </mat-horizontal-stepper>
+</div>

@@ -1,0 +1,17 @@
+<div fxLayout="row wrap" fxLayoutAlign="center center" class="form-group">
+    <div fxFlex.gt-sm="70" class="divide">
+        <mat-card>
+            <mat-card-title>Configuration Details</mat-card-title>
+            <mat-card-content>
+                <form #frm="ngForm">
+                    <mat-form-field class="display-block">
+                        <input matInput placeholder="Configuration" name="Configuration" required>
+                    </mat-form-field>
+                    <div fxLayout="row" fxLayoutAlign="center center">
+                        <button mat-raised-button color="primary" type="submit">Submit</button>
+                    </div>
+                </form>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>
