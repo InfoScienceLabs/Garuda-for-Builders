@@ -52,7 +52,7 @@ This is the tech Stack we are using to develop Garuda-for-Builder. Make sure you
   
    ##### Screenshots for User panel 
    * Marketplace
-  ![](docs/ Screenuser1.png)
+  ![](docs/Screenuser1.png)
 
 ## Authors
 
