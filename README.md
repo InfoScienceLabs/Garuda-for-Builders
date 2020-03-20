@@ -27,8 +27,7 @@ This is the tech Stack we are using to develop Garuda-for-Builder. Make sure you
 
 ## Screenshots:-  
  ##### Screenshots for Admin panel 
-  * Dashboard->Charts Boards  
-  ![](docs/screenb2b1.png)  
+   
   * project-> Create ->Add 
   ![](docs/scrrenb2b2.png)
   * Property -> Create
