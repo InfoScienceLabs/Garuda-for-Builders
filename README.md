@@ -33,7 +33,7 @@ See also the list of [contributors](https://github.com/Infosciencelabsdev/Garuda
 ## Contact Us
   Email:- info@infoscience.co
 ## License
-This project is licensed under the Apache License- see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the Apache License- see the [LICENSE](https://github.com/InfoScienceLabs/Garuda-for-Builders/blob/master/LICENSE) file for details
 
 
 
