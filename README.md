@@ -3,7 +3,7 @@ Garuda-for-Builders is open-source product which are using Angular 2+ for FrontE
 
 ## Getting Started
 
-follow the below instructions to Start with Garuda-
+Follow the below instructions to Start with Garuda-for-Builders
 
 ### Prerequisites
 This is the tech Stack we are using to develop Garuda-for-Builder. Make sure you are familiar with all of these:-
@@ -23,6 +23,13 @@ This is the tech Stack we are using to develop Garuda-for-Builder. Make sure you
     ````
    #### Garuda-API
    * Make sure you have to run  Garuda-API ,for more detail to run Garuda-API click [here](https://github.com/InfoScienceLabs/Garuda-API)
+
+
+## Screenshots:-  
+ ##### Screenshots for Admin panel 
+  * Dashboard->Charts Boards  
+  ![](docs/screenb2b1.png)
+  
 
 ## Authors
 
