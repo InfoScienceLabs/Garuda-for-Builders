@@ -28,8 +28,31 @@ This is the tech Stack we are using to develop Garuda-for-Builder. Make sure you
 ## Screenshots:-  
  ##### Screenshots for Admin panel 
   * Dashboard->Charts Boards  
-  ![](docs/screenb2b1.png)
+  ![](docs/screenb2b1.png)  
+  * project-> Create ->Add 
+  ![](docs/scrrenb2b2.png)
+  * Property -> Create
+  ![](docs/scrrenb2b3.png)
+  * Users -> Customers -> Add
+  ![](docs/screenb2b4.png)
+  * Agent -> Create ->Add
+  ![](docs/screenb2b5.png)  
+  * Reports -> Create
+  ![](docs/screenb2b6.png)  
+  * Settings -> Coupons
+  ![](docs/Screensetting.png)
+ 
+  ##### Screenshots for Government panel 
+   * Marketplace
+   ![](docs/screengovt1.png)
+   * Property
+   ![](docs/ScreenGovt2.png)
+   * Tax
+   ![](docs/screengovt3.png)
   
+   ##### Screenshots for User panel 
+   * Marketplace
+  ![](docs/ Screenuser1.png)
 
 ## Authors
 
